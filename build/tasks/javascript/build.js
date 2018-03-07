@@ -16,7 +16,7 @@ const message = require('../../lib/message')
 module.exports = () => {
   return rollup({
       format: 'iife',
-      input: '../resources/assets/js/main.js',
+      input: '../assets/js/main.js',
       plugins: [
         resolve(),
         commonjs(),

@@ -1,5 +1,4 @@
 const gulp = require('gulp')
-const message = require('./lib/message')
 
 const browsersync = require('browser-sync').create()
 const reload = browsersync.reload
@@ -87,16 +86,16 @@ gulp.task('sync', () => {
 |
 */
 gulp.task('watch', ['sync'], () => {
-  gulp.watch('../resources/assets/sass/**/*.scss', ['sass', reload])
+  gulp.watch('../assets/sass/**/*.scss', ['sass', reload])
     .on('error', message.error('WATCH: Sass'))
 
-  gulp.watch('../resources/assets/js/**/*.js', ['javascript', reload])
+  gulp.watch('../assets/js/**/*.js', ['javascript', reload])
     .on('error', message.error('WATCH: Javascript'))
 
-  gulp.watch('../resources/assets/fonts/**/*.ttf', ['font', reload])
+  gulp.watch('../assets/fonts/**/*.ttf', ['font', reload])
     .on('error', message.error('WATCH: Fonts'))
 
-  gulp.watch('../resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}', ['image', reload])
+  gulp.watch('../assets/images/**/*.{jpg,jpeg,png,gif,svg}', ['image', reload])
     .on('error', message.error('WATCH: Images'))
 })
 
