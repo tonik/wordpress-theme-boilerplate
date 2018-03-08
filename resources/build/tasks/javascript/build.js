@@ -28,5 +28,5 @@ module.exports = () => {
     .pipe(buffer())
     .pipe(gulpif(!isdev, uglify()))
     .on('error', message.error('JAVASCRIPT: Minification'))
-    .pipe(gulp.dest('../public/js'))
+    .pipe(gulp.dest('../../public/js'))
 }

@@ -71,7 +71,7 @@ gulp.task('javascript', ['javascript:clean', 'javascript:lint', 'javascript:buil
 gulp.task('sync', () => {
   browsersync.init({
     open: false,
-    server: { baseDir: '../public' }
+    server: { baseDir: '../../public' }
   })
 })
 

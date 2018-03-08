@@ -18,5 +18,5 @@ module.exports = () => {
       cascade: false
     }))
     .pipe(gulpif(!isdev, cleancss()))
-    .pipe(gulp.dest('../public/css'))
+    .pipe(gulp.dest('../../public/css'))
 }

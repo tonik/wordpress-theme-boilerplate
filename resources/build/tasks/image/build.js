@@ -10,5 +10,5 @@ module.exports = () => {
   return gulp.src('../assets/images/**/*.{jpg,jpeg,png,gif,svg}')
     .pipe(gulpif(!isdev, imagemin()))
     .on('error', message.error('IMAGE: Minification'))
-    .pipe(gulp.dest('../public/images'))
+    .pipe(gulp.dest('../../public/images'))
 }
