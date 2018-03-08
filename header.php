@@ -21,8 +21,8 @@
 
 <body <?php body_class(); ?>>
 
-    <footer>
 
-    </footer>
-</body>
-</html>
+<header>
+    <?php get_template_part('template-parts/parts/parts', 'header') ?>
+    <?php get_template_part('template-parts/nav/nav', 'top') ?>
+</header>
