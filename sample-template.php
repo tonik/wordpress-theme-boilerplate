@@ -12,10 +12,7 @@
 // Template Name: Sample Template
 get_header();
 
-/**
- * Content goes here
- */
+// content
 get_template_part('resources/templates/content/content', 'sample-template');
 
 get_footer();
-?>

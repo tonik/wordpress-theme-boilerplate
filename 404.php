@@ -1,3 +1,15 @@
+<?php
+/**
+ * Template that handle 404 requests on server
+ *
+ * @link https://developer.wordpress.org/themes/functionality/404-pages/
+ *
+ * @package Tonik Boilerplate
+ */
+
+get_header();
+?>
+
 <?php get_header(); ?>
 
     <main role="main">
