@@ -9,14 +9,4 @@
 
 ?>
 
-<article>
-    <header>
-        <h1><?= the_title(); ?></h1>
-    </header>
-
-    <div>
-        <?= the_content(); ?>
-    </div>
-
-    <footer></footer>
-</article>
+<?php get_template_part('resources/templates/common/common', 'article'); ?>
