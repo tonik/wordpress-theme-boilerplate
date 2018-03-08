@@ -7,7 +7,7 @@
          * @return void
          */
         function openinvest_register_styles() {
-            wp_register_style('styles', get_template_directory_uri() . '/build/styles/style.css', array(), time());
+            wp_register_style('styles', get_template_directory_uri() . '/public/css/app.css', array(), time());
 
             wp_enqueue_style('styles');
         }
