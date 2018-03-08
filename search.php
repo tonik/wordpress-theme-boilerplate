@@ -11,6 +11,6 @@
 get_header();
 
 // content
-get_template_part('template-parts/content/content', 'search');
+get_template_part('resources/templates/content/content', 'search');
 
 get_footer();

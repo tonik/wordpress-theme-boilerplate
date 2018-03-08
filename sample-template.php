@@ -15,7 +15,7 @@ get_header();
 /**
  * Content goes here
  */
-get_template_part('template-parts/content/content', 'sample-template');
+get_template_part('resources/templates/content/content', 'sample-template');
 
 get_footer();
 ?>

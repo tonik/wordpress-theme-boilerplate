@@ -23,6 +23,6 @@
 
 
 <header>
-    <?php get_template_part('template-parts/parts/parts', 'header') ?>
-    <?php get_template_part('template-parts/nav/nav', 'top') ?>
+    <?php get_template_part('resources/templates/parts/parts', 'header') ?>
+    <?php get_template_part('resources/templates/nav/nav', 'top') ?>
 </header>

@@ -1,8 +1,8 @@
 <?php
 
-    include 'include/register-styles.php';
-    include 'include/register-scripts.php';
+    include 'include/styles.php';
+    include 'include/scripts.php';
 
-    include 'include/custom-nav-register.php';
-    include 'include/custom-post-types.php';
-    include 'include/custom-thumbnails.php';
+    include 'include/nav.php';
+    include 'include/post-types.php';
+    include 'include/thumbnails.php';
