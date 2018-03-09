@@ -1,31 +1,31 @@
 <?php
 /**
- * The main template file
+ * The most generic template file in hierarchy.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Tonik Boilerplate
  */
-
-get_header();
 ?>
 
-<main>
-    <?php
-        if ( have_posts() ) {
-            if ( is_home() && is_front_page()) {
-                get_template_part('resources/templates/content/content', 'homepage');
-            } else {
-                while ( have_posts() ) {
-                    the_post();
+<?php get_header(); ?>
 
-                    get_template_part( 'resources/templates/content/content', get_post_type() );
-                }
-            }
-        }
-    ?>
+<main>
+    <?php if ( have_posts() ) : ?>
+        <section>
+            <?php if ( is_home() && is_front_page() ) : ?>
+                <?php get_template_part( 'resources/templates/content/content', 'homepage' ); ?>
+            <?php else : ?>
+                <?php while ( have_posts() ) : the_post() ?>
+                    <article>
+                        <?php get_template_part( 'resources/templates/content/content', get_post_type() ); ?>
+                    </article>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </section>
+    <?php endif; ?>
+
+    <aside>
+        <?php get_sidebar(); ?>
+    </aside>
 </main>
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>
