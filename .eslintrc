@@ -1,14 +1,17 @@
 {
   "extends": "standard",
-  "rules": {
+  "parserOptions": {
     "ecmaVersion": 6,
-    "sourceType": "module",
-    "one-var": ["error", {
+    "sourceType": "module"
+  },
+  "rules": {
+    "one-var": [
+      "error", {
         "var": "always",
         "let": "always",
         "const": "never"
-        }
-      ],
+      }
+    ],
     "eqeqeq": ["error", "smart"]
   }
 }

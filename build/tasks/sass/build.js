@@ -10,7 +10,7 @@ const prefix = require('gulp-autoprefixer')
 const message = require('../../lib/message')
 
 module.exports = () => {
-  return gulp.src('../assets/sass/app.scss')
+  return gulp.src('../resources/assets/sass/app.scss')
     .pipe(sass())
     .on('error', message.error('SASS: Compilation'))
     .pipe(prefix({
@@ -18,5 +18,5 @@ module.exports = () => {
       cascade: false
     }))
     .pipe(gulpif(!isdev, cleancss()))
-    .pipe(gulp.dest('../../public/css'))
+    .pipe(gulp.dest('../public/css'))
 }

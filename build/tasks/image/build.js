@@ -7,8 +7,8 @@ const imagemin = require('gulp-imagemin')
 const message = require('../../lib/message')
 
 module.exports = () => {
-  return gulp.src('../assets/images/**/*.{jpg,jpeg,png,gif,svg}')
+  return gulp.src('../resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}')
     .pipe(gulpif(!isdev, imagemin()))
     .on('error', message.error('IMAGE: Minification'))
-    .pipe(gulp.dest('../../public/images'))
+    .pipe(gulp.dest('../public/images'))
 }
