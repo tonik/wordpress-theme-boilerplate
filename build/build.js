@@ -3,10 +3,12 @@ const gulp = require('gulp')
 const browsersync = require('browser-sync').create()
 const reload = browsersync.reload
 
+const message = require('./lib/message')
+
 // Tasks are using `NODE_ENV` variable to adjust its settings
 // to working enviourment. It is required to propertly
 // run tasks so we cant process without it.
-if (! process.env.NODE_ENV) {
+if (!process.env.NODE_ENV) {
   throw new Error('Please setup environment variable [NODE_ENV] before building.')
 }
 
@@ -71,7 +73,7 @@ gulp.task('javascript', ['javascript:clean', 'javascript:lint', 'javascript:buil
 gulp.task('sync', () => {
   browsersync.init({
     open: false,
-    server: { baseDir: '../../public' }
+    server: { baseDir: '../public' }
   })
 })
 
@@ -86,16 +88,16 @@ gulp.task('sync', () => {
 |
 */
 gulp.task('watch', ['sync'], () => {
-  gulp.watch('../assets/sass/**/*.scss', ['sass', reload])
+  gulp.watch('../resources/assets/sass/**/*.scss', ['sass', reload])
     .on('error', message.error('WATCH: Sass'))
 
-  gulp.watch('../assets/js/**/*.js', ['javascript', reload])
+  gulp.watch('../resources/assets/js/**/*.js', ['javascript', reload])
     .on('error', message.error('WATCH: Javascript'))
 
-  gulp.watch('../assets/fonts/**/*.ttf', ['font', reload])
+  gulp.watch('../resources/assets/fonts/**/*.ttf', ['font', reload])
     .on('error', message.error('WATCH: Fonts'))
 
-  gulp.watch('../assets/images/**/*.{jpg,jpeg,png,gif,svg}', ['image', reload])
+  gulp.watch('../resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}', ['image', reload])
     .on('error', message.error('WATCH: Images'))
 })
 
