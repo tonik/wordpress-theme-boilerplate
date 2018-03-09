@@ -3,30 +3,27 @@
  * Template that handle 404 requests on server
  *
  * @link https://developer.wordpress.org/themes/functionality/404-pages/
- *
- * @package Tonik Boilerplate
  */
-
-get_header();
 ?>
 
 <?php get_header(); ?>
 
-    <main role="main">
-        <section>
+<main>
+    <section>
+        <article>
+            <h1><?php echo __( 'Page not found', 'tonik' ); ?></h1>
 
-            <article>
-                <h1><?php _e( 'Page not found', 'tonik_b' ); ?></h1>
-                <h2>
-                    <a href="<?= home_url(); ?>">
-                        <?php _e( 'Homepage', 'tonik_b' ); ?>
-                    </a>
-                </h2>
-            </article>
+            <h2>
+                <a href="<?php echo home_url(); ?>">
+                    <?php echo __( 'Homepage', 'tonik' ); ?>
+                </a>
+            </h2>
+        </article>
+    </section>
 
-        </section>
-    </main>
-
-<?php get_sidebar(); ?>
+    <aside>
+        <?php get_sidebar(); ?>
+    </aside>
+</main>
 
 <?php get_footer(); ?>

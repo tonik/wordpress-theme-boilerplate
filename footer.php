@@ -1,17 +1,12 @@
 <?php
 /**
- * This is the template that displays all of the <footer> section and rest of html code
+ * This is the template that displays all of the <footer> section and rest of html code.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Tonik Boilerplate
  */
-
 ?>
+        <?php get_template_part( 'resources/templates/parts/parts', 'footer' ) ?>
 
-    <!-- header -->
-    <?php get_template_part('resources/templates/parts/parts', 'footer') ?>
-
-    <?php wp_footer(); ?>
-</body>
+        <?php wp_footer(); ?>
+    </body>
 </html>
