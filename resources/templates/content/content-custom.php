@@ -3,8 +3,6 @@
  * Template part for displaying custom-post post content
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Tonik Boilerplate
  */
 
 ?>

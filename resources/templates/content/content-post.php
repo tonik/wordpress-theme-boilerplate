@@ -4,7 +4,6 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Tonik Boilerplate
  */
 
 ?>
