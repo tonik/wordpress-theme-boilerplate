@@ -12,12 +12,6 @@
 ?>
 
 <section>
-    <header>
-        <h1>Homepage</h1>
-    </header>
-</section>
-
-<section>
 
     <!-- posts loop -->
     <div>

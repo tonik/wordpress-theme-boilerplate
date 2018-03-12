@@ -21,7 +21,10 @@ module.exports = () => {
       resolve(),
       commonjs(),
       babel()
-    ]
+    ],
+    globals: {
+      jquery: 'jQuery'
+    }
   })
     .on('error', message.error('JAVASCRIPT: Bundling'))
     .pipe(source('main.js'))
