@@ -24,19 +24,16 @@ We made this boilerplate to make our internal Wordpress sites development easier
 
 ### Installation
 
-Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
-
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-$ cd dillinger
-$ npm install -d
-$ node app
+$ npm install
+$ npm run dev
+$ npm run watch
 ```
 
 For production environments...
 
 ```sh
-$ npm install --production
-$ NODE_ENV=production node app
+$ npm prod
 ```
