@@ -1,3 +1,18 @@
-div {
-  background: rgba(153, 120, 125, .2);
+/*  THIS IS SAMPLE CODE - DELETE IT DURING DEVELOPMENT */
+@import 'sample';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+nav {
+  display: flex;
 }

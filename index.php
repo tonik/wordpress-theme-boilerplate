@@ -8,7 +8,7 @@
 
 <?php get_header(); ?>
 
-<main>
+<main class="box">
     <?php if ( have_posts() ) : ?>
         <section>
             <?php if ( is_home() && is_front_page() ) : ?>
