@@ -11,6 +11,10 @@
 
 <?php get_header(); ?>
 
-<?php get_template_part( 'resources/templates/content/content', 'sample-template' ); ?>
+<main>
+    <h1><?php the_title() ?></h1>
+
+    <p>This is a sample custom-template content. To edit this text, please modify 'template-parts/content/content-sample-template.php'</p>
+</main>
 
 <?php get_footer(); ?>
