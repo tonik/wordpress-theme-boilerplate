@@ -9,6 +9,10 @@
 
 ?>
 
-<aside>
-    <h3><?php _e( 'Sidebar content', 'tonik_b' ); ?></h3>
-</aside>
+<div class="pages">
+    <?php
+        wp_list_pages([
+            'title_li' => ''
+        ]);
+    ?>
+</div>

@@ -9,7 +9,7 @@
 
 ?>
 
-<footer>
+<footer class="footer">
 
     <!-- bottom nav -->
     <?php get_template_part('resources/templates/nav/nav', 'bottom') ?>
