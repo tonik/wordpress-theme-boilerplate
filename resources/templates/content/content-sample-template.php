@@ -5,8 +5,6 @@
  * content-____ -> where '____' means your template name
  *
  * @link https://developer.wordpress.org/themes/template-files-section/page-template-files/#creating-custom-page-templates-for-global-use
- *
- * @package Tonik Boilerplate
  */
 
 ?>
