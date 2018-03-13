@@ -1,0 +1,10 @@
+{
+  "name": "tonik/wordpress-theme-boilerplate",
+  "description": "A modern WordPress boilerplate for building organized and standardized themes",
+  "keywords": ["tonik", "theme", "boilerplate", "wordpress", "wordpress-starter-theme", "wordpress-theme"],
+  "license": "MIT",
+  "type": "wordpress-theme",
+  "require": {
+    "php": ">=5.3"
+  }
+}
