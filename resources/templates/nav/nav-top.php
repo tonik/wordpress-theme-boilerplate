@@ -8,6 +8,6 @@
 
 <nav>
     <?php wp_nav_menu( [
-        'theme_location' => 'top_nav',
+        'theme_location' => 'top',
     ] ); ?>
 </nav>

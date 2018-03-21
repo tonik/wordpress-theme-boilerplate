@@ -15,8 +15,8 @@ if ( ! function_exists( 'tonik_register_navigations' ) ) {
      */
     function tonik_register_navigations() {
         register_nav_menus( [
-            'top_nav' => __( 'Top Nav', 'tonik' ),
-            'bottom_nav' => __( 'Bottom Nav', 'tonik' )
+            'top' => __( 'Top Navigation', 'tonik' ),
+            'bottom' => __( 'Bottom Navigation', 'tonik' )
         ] );
     }
 }
