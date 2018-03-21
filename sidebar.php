@@ -8,11 +8,14 @@
 
 <aside class="sidebar">
     <div class="sidebar__item">
-        <h3 class="sidebar__title"><?php echo __( 'Categories', 'tonik' ); ?></h3>
+        <h3 class="sidebar__title"><?= __( 'Categories', 'tonik' ); ?></h3>
+
         <?php get_template_part( 'resources/templates/sidebar/sidebar', 'categories' ) ?>
     </div>
+
     <div class="sidebar__item">
-        <h3 class="sidebar__title"><?php echo __( 'Pages', 'tonik' ); ?></h3>
+        <h3 class="sidebar__title"><?= __( 'Pages', 'tonik' ); ?></h3>
+
         <?php get_template_part( 'resources/templates/sidebar/sidebar', 'pages' ) ?>
     </div>
 </aside>
