@@ -11,11 +11,11 @@
 <main>
     <section>
         <article>
-            <h1><?= __( 'Page not found', 'tonik' ); ?></h1>
+            <h1><?php echo __( 'Page not found', 'tonik' ); ?></h1>
 
             <h2>
-                <a href="<?= home_url(); ?>">
-                    <?= __( 'Homepage', 'tonik' ); ?>
+                <a href="<?php echo home_url(); ?>">
+                    <?php echo __( 'Homepage', 'tonik' ); ?>
                 </a>
             </h2>
         </article>

@@ -14,11 +14,11 @@ if ( ! function_exists( 'tonik_register_book_post_type' ) ) {
      * @return void
      */
     function tonik_register_book_post_type() {
-        register_post_type( 'book', [
+        register_post_type( 'book', array(
             'public' => true,
-            'supports' => [ 'title', 'editor', 'excerpt', 'thumbnail' ],
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
             'description' => __( 'Collection of books.', 'tonik' ),
-            'labels' => [
+            'labels' => array(
                 'name' => _x( 'Books', 'post type general name', 'tonik' ),
                 'singular_name' => _x( 'Book', 'post type singular name', 'tonik' ),
                 'menu_name' => _x( 'Books', 'admin menu', 'tonik' ),
@@ -33,8 +33,8 @@ if ( ! function_exists( 'tonik_register_book_post_type' ) ) {
                 'parent_item_colon' => __( 'Parent Books:', 'tonik' ),
                 'not_found' => __( 'No books found.', 'tonik' ),
                 'not_found_in_trash' => __( 'No books found in Trash.', 'tonik' ),
-            ],
-        ] );
+            ),
+        ) );
     }
 }
 add_action( 'init', 'tonik_register_book_post_type' );

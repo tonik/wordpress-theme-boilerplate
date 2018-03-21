@@ -17,7 +17,7 @@ What's inside?
 ### Requirements
 
 Boilerplate follows a [WordPress minimal requirements](https://wordpress.org/about/requirements/). Make sure you have these dependences installed before moving on:
-- PHP >= 5.3
+- PHP >= 5.2.4
 
 Theme uses [NPM](//www.npmjs.com/) as a front-end dependency manager. Make sure your development machine has installed following dependencies:
 - [Node.js](//nodejs.org/)

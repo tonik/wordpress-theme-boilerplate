@@ -47,13 +47,13 @@ if ( ! function_exists( 'tonik_add_theme_supports' ) ) {
          *
          * @see https://developer.wordpress.org/reference/functions/add_theme_support/#html5
          */
-        add_theme_support( 'html5', [
+        add_theme_support( 'html5', array(
             'search-form',
             'comment-form',
             'comment-list',
             'gallery',
             'caption',
-        ] );
+         ) );
     }
 }
 add_action( 'after_setup_theme', 'tonik_add_theme_supports' );
