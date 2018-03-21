@@ -1,17 +1,15 @@
 /*
-
-This file is responsible only for providing theme informations that are displayed
+This file is responsible only for providing theme information that are displayed
 in `Apperance > Themes`. Do not write in here any CSS declarations.
 
 Theme Name: Tonik WordPress Theme Boilerplate
 Theme URI: https://github.com/tonik/wordpress-theme-boilerplate
-Author: Tonik
-Author URI: http://tonik.pl/
 Description: ES6, SCSS ready Wordpress boilerplate theme.
 Version: 1.0
-License: MIT
-License URI: https://opensource.org/licenses/mit-license.php
-Tags: tonik, wordpress, es6, scss, eslint, stylelint, babel, yarn, rollup
 Text Domain: tonik
-
+Author: Tonik
+Author URI: http://tonik.pl/
+Tags: wordpress, es6, scss, gulp, eslint, stylelint
+License: GPLv2 License
+License URI: https://wordpress.org/about/gpl/
 */

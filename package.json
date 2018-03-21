@@ -11,13 +11,10 @@
     "images:production": "cross-env NODE_ENV=production gulp image --gulpfile=build/build.js",
     "sass:lint": "cross-env NODE_ENV=production gulp sass:lint --gulpfile=build/build.js",
     "javascript:lint": "cross-env NODE_ENV=production gulp javascript:lint --gulpfile=build/build.js",
-    "precommit": "npm run sass:lint && npm run javascript:lint"
+    "lint": "npm run sass:lint && npm run javascript:lint",
+    "precommit": "npm run lint"
   },
-  "dependencies": {
-    "react": "^16.2.0",
-    "rollup-plugin-includepaths": "^0.2.2",
-    "rollup-plugin-inject": "^2.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
