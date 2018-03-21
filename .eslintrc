@@ -3,15 +3,5 @@
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module"
-  },
-  "rules": {
-    "one-var": [
-      "error", {
-        "var": "always",
-        "let": "always",
-        "const": "never"
-      }
-    ],
-    "eqeqeq": ["error", "smart"]
   }
 }

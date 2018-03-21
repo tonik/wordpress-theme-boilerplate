@@ -1,15 +1,20 @@
 <?php
+/**
+ * ------------------------------------------------------------------------
+ * Theme's Custom Image Sizes
+ * ------------------------------------------------------------------------
+ * This file is for registering custom image
+ * sizes for using as for thumbnails.
+ */
 
-if ( ! function_exists( 'tonik_thumbnails_size' ) ) {
+if ( ! function_exists( 'tonik_register_thumbnails' ) ) {
     /**
-     * Set theme thumbnails sizes
+     * Registers theme's additional thumbnail sizes.
      *
      * @return void
      */
-    function tonik_thumbnails_size() {
-        add_theme_support( 'post-thumbnails' );
-        add_image_size( 'post', 440, 310, true );
+    function tonik_register_thumbnails() {
+        add_image_size( 'custom-thumbnail', 800, 600, true );
     }
 }
-
-add_action( 'after_setup_theme', 'tonik_thumbnails_size' );
+add_action( 'after_setup_theme', 'tonik_register_thumbnails' );
