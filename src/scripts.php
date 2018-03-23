@@ -9,13 +9,13 @@
  */
 
 if ( ! function_exists( 'tonik_register_scripts' ) ) {
-    /**
-     * Registers theme's JavaScript scripts.
-     *
-     * @return void
-     */
-    function tonik_register_scripts() {
-        wp_enqueue_script( 'scripts', get_template_directory_uri() . '/public/js/main.js', array( 'jquery' ), null, true );
-    }
+	/**
+	 * Registers theme's JavaScript scripts.
+	 *
+	 * @return void
+	 */
+	function tonik_register_scripts() {
+		wp_enqueue_script( 'scripts', get_template_directory_uri() . '/public/js/main.js', array( 'jquery' ), null, true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'tonik_register_scripts' );

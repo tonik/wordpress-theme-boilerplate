@@ -9,13 +9,13 @@
  */
 
 if ( ! function_exists( 'tonik_register_styles' ) ) {
-    /**
-     * Registers theme's CSS styles.
-     *
-     * @return void
-     */
-    function tonik_register_styles() {
-        wp_enqueue_style( 'styles', get_template_directory_uri() . '/public/css/app.css' );
-    }
+	/**
+	 * Registers theme's CSS styles.
+	 *
+	 * @return void
+	 */
+	function tonik_register_styles() {
+		wp_enqueue_style( 'styles', get_template_directory_uri() . '/public/css/app.css' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'tonik_register_styles' );

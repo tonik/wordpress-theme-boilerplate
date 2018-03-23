@@ -4,14 +4,10 @@
  */
 ?>
 
-<article>
-    <header>
-        <h1><?= the_title(); ?></h1>
+<header>
+	<h1><?php the_title(); ?></h1>
 
-        <?= the_post_thumbnail(); ?>
-    </header>
+	<?php the_post_thumbnail(); ?>
+</header>
 
-    <div><?= the_content(); ?></div>
-
-    <footer></footer>
-</article>
+<div><?php the_content(); ?></div>

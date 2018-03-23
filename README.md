@@ -2,17 +2,20 @@
 
 > The `develop` branch tracks boilerplate development and it's not a stable code. If you want a stable version, use the [`master`](//github.com/tonik/wordpress-theme-boilerplate/tree/master) branch or one of the latest [releases](//github.com/tonik/wordpress-theme-boilerplate/releases).
 
-### Boilerplate aims to be compatible with a large range of PHP versions, however, still have modern tooling for developing theme's front-end. The builder was borrowed from our [html-frontend-boilerplate](https://github.com/tonik/html-frontend-boilerplate) project.
+### Boilerplate aims to be compatible with a large range of PHP versions, however, still have modern tooling for developing a theme.
 
-What's inside?
+ What's inside?
 
 - [Gulp](//gulpjs.com/) - Task runner
 - [Nunjucks](//mozilla.github.io/nunjucks/) - Templates engine
-- [SASS](//sass-lang.com/) - CSS preprocessor
+- [SASS](//sass-lang.com/) - a CSS preprocessor
 - [Babel](//babeljs.io/) - JavaScript ES6 to ES5 compiler
-- [Rollup](//rollupjs.org/) - JavaScript bundler
-- [Stylelint](//stylelint.io/) - CSS/SCSS linter
-- [ESLint](//eslint.org/) - JavaScript linter
+- [Rollup](//rollupjs.org/) - a JavaScript Modules Bundler
+- [Stylelint](//stylelint.io/) - a SCSS linter
+- [ESLint](//eslint.org/) - a JavaScript linter
+- [PHP_CodeSniffer](//github.com/squizlabs/PHP_CodeSniffer) - a PHP sniffer
+
+The front-end builder was borrowed from our [html-frontend-boilerplate](https://github.com/tonik/html-frontend-boilerplate) project.
 
 ### Requirements
 

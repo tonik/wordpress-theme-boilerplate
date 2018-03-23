@@ -8,10 +8,10 @@
  * across separate files in the `/src` directory.
  */
 
-include 'src/styles.php';
-include 'src/scripts.php';
+require_once 'src/styles.php';
+require_once 'src/scripts.php';
 
-include 'src/navs.php';
-include 'src/supports.php';
-include 'src/post-types.php';
-include 'src/thumbnails.php';
+require_once 'src/navs.php';
+require_once 'src/supports.php';
+require_once 'src/post-types.php';
+require_once 'src/thumbnails.php';

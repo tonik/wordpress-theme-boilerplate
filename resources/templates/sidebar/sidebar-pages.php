@@ -6,8 +6,10 @@
  */
 ?>
 
-<div class="pages">
-    <?php wp_list_pages( [
-        'title_li' => '',
-    ] ); ?>
+<div class="pages"></div>
+	<?php
+		wp_list_pages( [
+			'title_li' => '',
+		] );
+	?>
 </div>

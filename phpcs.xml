@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<ruleset name="WordPress Theme Boilerplate" namespace="WordPress\Theme\Boilerplate">
+  <config name="installed_paths" value="vendor/wp-coding-standards/wpcs" />
+
+  <arg name="extensions" value="php" />
+
+  <rule ref="WordPress-Extra" />
+
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+</ruleset>

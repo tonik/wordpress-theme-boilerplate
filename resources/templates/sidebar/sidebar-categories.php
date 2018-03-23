@@ -7,8 +7,10 @@
 ?>
 
 <div class="categories">
-    <?php wp_list_categories( [
-        'taxonomy' => 'category',
-        'title_li' => '',
-    ] ); ?>
+	<?php
+		wp_list_categories( [
+			'taxonomy' => 'category',
+			'title_li' => '',
+		] );
+	?>
 </div>

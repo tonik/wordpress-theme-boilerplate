@@ -7,7 +7,9 @@
 ?>
 
 <nav>
-    <?php wp_nav_menu( [
-        'theme_location' => 'bottom',
-    ] ); ?>
+	<?php
+		wp_nav_menu( [
+			'theme_location' => 'bottom',
+		] );
+	?>
 </nav>
