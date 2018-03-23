@@ -8,9 +8,9 @@
 
 <div class="categories">
 	<?php
-		wp_list_categories( [
+		wp_list_categories( array(
 			'taxonomy' => 'category',
 			'title_li' => '',
-		] );
+		) );
 	?>
 </div>

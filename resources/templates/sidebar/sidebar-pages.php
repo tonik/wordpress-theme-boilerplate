@@ -8,8 +8,8 @@
 
 <div class="pages"></div>
 	<?php
-		wp_list_pages( [
+		wp_list_pages( array(
 			'title_li' => '',
-		] );
+		) );
 	?>
 </div>

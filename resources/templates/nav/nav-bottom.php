@@ -8,8 +8,8 @@
 
 <nav>
 	<?php
-		wp_nav_menu( [
+		wp_nav_menu( array(
 			'theme_location' => 'bottom',
-		] );
+		) );
 	?>
 </nav>
