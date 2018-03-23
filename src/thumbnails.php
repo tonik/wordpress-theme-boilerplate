@@ -11,6 +11,9 @@ if ( ! function_exists( 'tonik_register_thumbnails' ) ) {
 	/**
 	 * Registers theme's additional thumbnail sizes.
 	 *
+	 * @todo Change function prefix to your textdomain.
+	 * @todo Update prefix in the hook function and if statement.
+	 *
 	 * @return void
 	 */
 	function tonik_register_thumbnails() {

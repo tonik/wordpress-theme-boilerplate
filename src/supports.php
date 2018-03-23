@@ -12,6 +12,9 @@ if ( ! function_exists( 'tonik_add_theme_supports' ) ) {
 	/**
 	 * Adds a recommended theme supports.
 	 *
+	 * @todo Change function prefix to your textdomain.
+	 * @todo Update prefix in the hook function and if statement.
+	 *
 	 * @return void
 	 */
 	function tonik_add_theme_supports() {
@@ -47,13 +50,15 @@ if ( ! function_exists( 'tonik_add_theme_supports' ) ) {
 		 *
 		 * @see https://developer.wordpress.org/reference/functions/add_theme_support/#html5
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5', array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 	}
 }
 add_action( 'after_setup_theme', 'tonik_add_theme_supports' );
@@ -61,6 +66,10 @@ add_action( 'after_setup_theme', 'tonik_add_theme_supports' );
 if ( ! function_exists( 'tonik_load_textdomain' ) ) {
 	/**
 	 * Loads theme's textdomain language files.
+	 *
+	 * @todo Change function prefix to your textdomain.
+	 * @todo Update prefix in the hook function and if statement.
+	 * @todo Change first argument of `load_theme_textdomain` function to your textdomain.
 	 *
 	 * @return void
 	 */

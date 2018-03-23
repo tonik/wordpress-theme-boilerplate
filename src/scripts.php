@@ -12,10 +12,13 @@ if ( ! function_exists( 'tonik_register_scripts' ) ) {
 	/**
 	 * Registers theme's JavaScript scripts.
 	 *
+	 * @todo Change function prefix to your textdomain.
+	 * @todo Update prefix in the hook function and if statement.
+	 *
 	 * @return void
 	 */
 	function tonik_register_scripts() {
-		wp_enqueue_script( 'scripts', get_template_directory_uri() . '/public/js/main.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/public/js/main.js', array( 'jquery' ), null, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'tonik_register_scripts' );
