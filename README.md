@@ -7,7 +7,6 @@
  What's inside?
 
 - [Gulp](//gulpjs.com/) - Task runner
-- [Nunjucks](//mozilla.github.io/nunjucks/) - Templates engine
 - [SASS](//sass-lang.com/) - a CSS preprocessor
 - [Babel](//babeljs.io/) - JavaScript ES6 to ES5 compiler
 - [Rollup](//rollupjs.org/) - a JavaScript Modules Bundler
