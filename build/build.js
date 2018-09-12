@@ -1,9 +1,8 @@
 const gulp = require('gulp')
+const message = require('./lib/message')
 
 const browsersync = require('browser-sync').create()
 const reload = browsersync.reload
-
-const message = require('./lib/message')
 
 // Tasks are using `NODE_ENV` variable to adjust its settings
 // to working enviourment. It is required to propertly
@@ -94,7 +93,7 @@ gulp.task('watch', ['sync'], () => {
   gulp.watch('../resources/assets/js/**/*.js', ['javascript', reload])
     .on('error', message.error('WATCH: Javascript'))
 
-  gulp.watch('../resources/assets/fonts/**/*.ttf', ['font', reload])
+  gulp.watch('../resources/assets/fonts/**/*.{eot,woff,woff2,ttf,svg}', ['font', reload])
     .on('error', message.error('WATCH: Fonts'))
 
   gulp.watch('../resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}', ['image', reload])
