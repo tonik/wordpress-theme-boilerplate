@@ -2,18 +2,12 @@
 /**
  * <article> common component that display basic information about post in loop. You can manage other commons components in this folder.
  */
-
 ?>
 
-<article>
-    <header>
-        <h1><?= the_title(); ?></h1>
-        <?= the_post_thumbnail() ?>
-    </header>
+<header>
+	<h1><?php the_title(); ?></h1>
 
-    <div>
-        <?= the_content(); ?>
-    </div>
+	<?php the_post_thumbnail(); ?>
+</header>
 
-    <footer></footer>
-</article>
+<div><?php the_content(); ?></div>

@@ -4,13 +4,12 @@
  *
  * @link https://developer.wordpress.org/reference/functions/wp_nav_menu/
  */
-
 ?>
 
 <nav>
-    <?php
-        wp_nav_menu([
-            'theme_location' => 'top_nav'
-        ]);
-    ?>
+	<?php
+		wp_nav_menu( array(
+			'theme_location' => 'top',
+		) );
+	?>
 </nav>

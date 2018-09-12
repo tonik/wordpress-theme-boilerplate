@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<ruleset name="WordPress Theme Boilerplate" namespace="WordPress\Theme\Boilerplate">
+  <!--
+    Provide installation path to the WordPress Coding Standards.
+  -->
+  <config name="installed_paths" value="vendor/wp-coding-standards/wpcs" />
+
+  <!--
+    Check only files with .php extension.
+  -->
+  <arg name="extensions" value="php" />
+
+  <!--
+    Exclude from checking package managers directiories.
+  -->
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+
+  <!--
+    Disallow using a short array syntax.
+  -->
+  <rule ref="Generic.Arrays.DisallowShortArraySyntax.Found">
+    <type>warning</type>
+  </rule>
+
+  <!--
+    Extend WordPress Coding Standard ruleset.
+  -->
+  <rule ref="WordPress-Extra" />
+
+  <!--
+    Check for valid text-domains provided in the $text_domain property.
+
+    @todo Update a rule value to your project textdomain string
+  -->
+  <rule ref="WordPress.WP.I18n">
+    <properties>
+      <property name="text_domain" type="array" value="tonik" />
+    </properties>
+  </rule>
+
+  <!--
+    Check for valid prefixes in functions names.
+
+    @todo Update a rule value to your project textdomain string
+  -->
+  <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+    <properties>
+      <property name="prefixes" type="array" value="tonik" />
+    </properties>
+  </rule>
+
+  <!--
+    Turn on theme's filenames validation.
+  -->
+  <rule ref="WordPress.Files.FileName">
+    <properties>
+      <property name="is_theme" value="true" />
+    </properties>
+  </rule>
+
+  <!--
+    Chack for usage of deprecated functions.
+  -->
+  <rule ref="WordPress.WP.DeprecatedFunctions">
+    <properties>
+      <property name="minimum_supported_version" value="4.0" />
+    </properties>
+  </rule>
+</ruleset>
