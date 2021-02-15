@@ -16,34 +16,34 @@ if (!process.env.NODE_ENV) {
 | SASS Tasks
 |--------------------------------------------------------------------------
 */
-gulp.task('sass:clean', require('./tasks/sass/clean'))
-gulp.task('sass:lint', require('./tasks/sass/lint'))
-gulp.task('sass:build', require('./tasks/sass/build'))
+gulp.task('sass:clean', (cb) => {require('./tasks/sass/clean') ( cb() )} )
+gulp.task('sass:lint', (cb) => {require('./tasks/sass/lint') ( cb() )} )
+gulp.task('sass:build', (cb) => {require('./tasks/sass/build') ( cb() )} )
 
 /*
 |--------------------------------------------------------------------------
 | Fonts Tasks
 |--------------------------------------------------------------------------
 */
-gulp.task('font:clean', require('./tasks/font/clean'))
-gulp.task('font:build', require('./tasks/font/build'))
+ulp.task('font:clean', (cb) => {require('./tasks/font/clean') ( cb() )} )
+gulp.task('font:build', (cb) => {require('./tasks/font/build') ( cb() )} )
 
 /*
 |--------------------------------------------------------------------------
 | Images Tasks
 |--------------------------------------------------------------------------
 */
-gulp.task('image:clean', require('./tasks/image/clean'))
-gulp.task('image:build', require('./tasks/image/build'))
+gulp.task('image:clean', (cb) => { require('./tasks/image/clean') ( cb() )} )
+gulp.task('image:build', (cb) => { require('./tasks/image/build') ( cb() )} )
 
 /*
 |--------------------------------------------------------------------------
 | JavaScript Tasks
 |--------------------------------------------------------------------------
 */
-gulp.task('javascript:clean', require('./tasks/javascript/clean'))
-gulp.task('javascript:lint', require('./tasks/javascript/lint'))
-gulp.task('javascript:build', ['javascript:clean'], require('./tasks/javascript/build'))
+gulp.task('javascript:clean', (cb) => {require('./tasks/javascript/clean')(cb())});
+gulp.task('javascript:lint', (cb) => {require('./tasks/javascript/lint')(cb())});
+gulp.task('javascript:build', gulp.series(['javascript:clean']), (cb) => {require('./tasks/javascript/build')(cb())});
 
 /*
 |--------------------------------------------------------------------------
@@ -54,10 +54,10 @@ gulp.task('javascript:build', ['javascript:clean'], require('./tasks/javascript/
 | They compose a complete building pipline for each domain.
 |
 */
-gulp.task('font', ['font:clean', 'font:build'])
-gulp.task('image', ['image:clean', 'image:build'])
-gulp.task('sass', ['sass:clean', 'sass:lint', 'sass:build'])
-gulp.task('javascript', ['javascript:clean', 'javascript:lint', 'javascript:build'])
+gulp.task('font', gulp.series(['font:clean', 'font:build']))
+gulp.task('image', gulp.series(['image:clean', 'image:build']))
+gulp.task('sass', gulp.series(['sass:clean', 'sass:lint', 'sass:build']))
+gulp.task('javascript', gulp.series(['javascript:clean', 'javascript:lint', 'javascript:build']))
 
 /*
 |--------------------------------------------------------------------------
@@ -86,7 +86,7 @@ gulp.task('sync', () => {
 | and recompiling separetly for better performance.
 |
 */
-gulp.task('watch', ['sync'], () => {
+gulp.task('watch', ['sync'], (cb) => {
   gulp.watch('../resources/assets/sass/**/*.scss', ['sass', reload])
     .on('error', message.error('WATCH: Sass'))
 
@@ -98,6 +98,8 @@ gulp.task('watch', ['sync'], () => {
 
   gulp.watch('../resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}', ['image', reload])
     .on('error', message.error('WATCH: Images'))
+
+  cb()
 })
 
 /*
@@ -110,4 +112,4 @@ gulp.task('watch', ['sync'], () => {
 | tasks and completely building the whole project.
 |
 */
-gulp.task('default', ['sass', 'javascript', 'font', 'image'])
+gulp.task('default', gulp.series(['sass', 'javascript', 'font', 'image']))
