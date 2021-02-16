@@ -25,7 +25,7 @@ gulp.task('sass:build', (cb) => {require('./tasks/sass/build') ( cb() )} )
 | Fonts Tasks
 |--------------------------------------------------------------------------
 */
-ulp.task('font:clean', (cb) => {require('./tasks/font/clean') ( cb() )} )
+gulp.task('font:clean', (cb) => {require('./tasks/font/clean') ( cb() )} )
 gulp.task('font:build', (cb) => {require('./tasks/font/build') ( cb() )} )
 
 /*
@@ -86,7 +86,7 @@ gulp.task('sync', () => {
 | and recompiling separetly for better performance.
 |
 */
-gulp.task('watch', ['sync'], (cb) => {
+gulp.task('watch', gulp.series(['sync']), (cb) => {
   gulp.watch('../resources/assets/sass/**/*.scss', ['sass', reload])
     .on('error', message.error('WATCH: Sass'))
 
