@@ -16,34 +16,34 @@ if (!process.env.NODE_ENV) {
 | SASS Tasks
 |--------------------------------------------------------------------------
 */
-gulp.task('sass:clean', (cb) => {require('./tasks/sass/clean') ( cb() )} )
-gulp.task('sass:lint', (cb) => {require('./tasks/sass/lint') ( cb() )} )
-gulp.task('sass:build', (cb) => {require('./tasks/sass/build') ( cb() )} )
+gulp.task('sass:clean', (cb) => { require('./tasks/sass/clean') (cb())})
+gulp.task('sass:lint', (cb) => { require('./tasks/sass/lint') (cb())})
+gulp.task('sass:build', (cb) => { require('./tasks/sass/build') (cb())})
 
 /*
 |--------------------------------------------------------------------------
 | Fonts Tasks
 |--------------------------------------------------------------------------
 */
-gulp.task('font:clean', (cb) => {require('./tasks/font/clean') ( cb() )} )
-gulp.task('font:build', (cb) => {require('./tasks/font/build') ( cb() )} )
+gulp.task('font:clean', (cb) => { require('./tasks/font/clean') (cb())})
+gulp.task('font:build', (cb) => { require('./tasks/font/build') (cb())})
 
 /*
 |--------------------------------------------------------------------------
 | Images Tasks
 |--------------------------------------------------------------------------
 */
-gulp.task('image:clean', (cb) => { require('./tasks/image/clean') ( cb() )} )
-gulp.task('image:build', (cb) => { require('./tasks/image/build') ( cb() )} )
+gulp.task('image:clean', (cb) => { require('./tasks/image/clean') (cb())})
+gulp.task('image:build', (cb) => { require('./tasks/image/build') (cb())})
 
 /*
 |--------------------------------------------------------------------------
 | JavaScript Tasks
 |--------------------------------------------------------------------------
 */
-gulp.task('javascript:clean', (cb) => {require('./tasks/javascript/clean')(cb())});
-gulp.task('javascript:lint', (cb) => {require('./tasks/javascript/lint')(cb())});
-gulp.task('javascript:build', gulp.series(['javascript:clean']), (cb) => {require('./tasks/javascript/build')(cb())});
+gulp.task('javascript:clean', (cb) => { require('./tasks/javascript/clean') (cb())})
+gulp.task('javascript:lint', (cb) => { require('./tasks/javascript/lint') (cb())})
+gulp.task('javascript:build', gulp.series(['javascript:clean']), (cb) => { require('./tasks/javascript/build') (cb())})
 
 /*
 |--------------------------------------------------------------------------
@@ -72,7 +72,11 @@ gulp.task('javascript', gulp.series(['javascript:clean', 'javascript:lint', 'jav
 gulp.task('sync', () => {
   browsersync.init({
     open: false,
-    server: { baseDir: '../public' }
+    server: { baseDir: '../public' },
+    /* Uncomment for Custom/Docker Ports 
+    proxy : "localhost:8080",
+    port: "4000"
+    */
   })
 })
 
@@ -86,21 +90,26 @@ gulp.task('sync', () => {
 | and recompiling separetly for better performance.
 |
 */
-gulp.task('watch', gulp.series(['sync']), (cb) => {
-  gulp.watch('../resources/assets/sass/**/*.scss', ['sass', reload])
+gulp.task('watch_tasks', () => {
+
+  gulp.watch('../src/**/*.scss', gulp.series(['sass']))
     .on('error', message.error('WATCH: Sass'))
+    .on("change", gulp.series(reload))
 
-  gulp.watch('../resources/assets/js/**/*.js', ['javascript', reload])
+  gulp.watch('../src/assets/js/**/*.js', gulp.series(['javascript']))
     .on('error', message.error('WATCH: Javascript'))
+    .on("change", gulp.series(reload))
 
-  gulp.watch('../resources/assets/fonts/**/*.{eot,woff,woff2,ttf,svg}', ['font', reload])
+  gulp.watch('../src/assets/fonts/**/*.{eot,woff,woff2,ttf,svg}', gulp.series(['font']))
     .on('error', message.error('WATCH: Fonts'))
+    .on("change", gulp.series(reload))
 
-  gulp.watch('../resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}', ['image', reload])
+  gulp.watch('../src/assets/images/**/*.{jpg,jpeg,png,gif,svg}', gulp.series(['image']))
     .on('error', message.error('WATCH: Images'))
-
-  cb()
+    .on("change", gulp.series(reload))
 })
+
+gulp.task('watch', gulp.parallel(['sync', 'watch_tasks']))
 
 /*
 |--------------------------------------------------------------------------
